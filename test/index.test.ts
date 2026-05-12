@@ -184,6 +184,14 @@ describe("Code Cat commands", () => {
 });
 
 describe("Code Cat config", () => {
+  test("loads optional OpenAI base URL", () => {
+    const config = loadConfig({
+      OPENAI_BASE_URL: " https://openai.example.com/v1 ",
+    });
+
+    expect(config.openaiBaseURL).toBe("https://openai.example.com/v1");
+  });
+
   test("uses CODECAT_PROXY_URL for GitHub and AI API outbound traffic", () => {
     const config = loadConfig({
       CODECAT_PROXY_URL: " http://user:pass@127.0.0.1:7890 ",

@@ -108,7 +108,10 @@ export class CodeCatAI {
 
   public constructor(private readonly config: CodeCatConfig) {
     if (config.openaiApiKey) {
-      this.client = new OpenAI({ apiKey: config.openaiApiKey });
+      this.client = new OpenAI({
+        apiKey: config.openaiApiKey,
+        baseURL: config.openaiBaseURL,
+      });
     }
   }
 
@@ -246,4 +249,3 @@ function extractOutputText(response: unknown): string {
   }
   return text;
 }
-

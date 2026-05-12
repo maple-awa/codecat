@@ -12,6 +12,7 @@ export interface ProxyConfig {
 export interface CodeCatConfig {
   openaiApiKey?: string;
   openaiModel: string;
+  openaiBaseURL?: string;
   proxy: ProxyConfig;
   timezone: string;
   dailyCron: string;

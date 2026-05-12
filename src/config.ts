@@ -62,6 +62,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): CodeCatConfig 
   return {
     openaiApiKey: env.OPENAI_API_KEY,
     openaiModel: env.OPENAI_MODEL || "gpt-5.5",
+    openaiBaseURL: firstValue(env.OPENAI_BASE_URL),
     proxy: parseProxyConfig(env),
     timezone: env.CODECAT_TIMEZONE || "Asia/Shanghai",
     dailyCron: env.CODECAT_DAILY_CRON || "0 3 * * *",

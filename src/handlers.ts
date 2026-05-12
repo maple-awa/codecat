@@ -316,6 +316,7 @@ function renderStatus(config: CodeCatConfig): string {
     "",
     `- OpenAI: ${config.openaiApiKey ? "configured" : "missing OPENAI_API_KEY"}`,
     `- Model: \`${config.openaiModel}\``,
+    `- OpenAI base URL: \`${config.openaiBaseURL ?? "default"}\``,
     `- Proxy: \`${renderProxySummary(config.proxy)}\``,
     `- Review mode: \`${config.reviewMode}\``,
     `- Auto fix: \`${config.autoFixEnabled ? "enabled" : "disabled"}\``,
@@ -329,6 +330,8 @@ function renderConfig(config: CodeCatConfig): string {
   return [
     "### Code Cat config",
     "",
+    `- OPENAI_MODEL=\`${config.openaiModel}\``,
+    `- OPENAI_BASE_URL=\`${config.openaiBaseURL ?? ""}\``,
     `- CODECAT_REVIEW_MODE=\`${config.reviewMode}\``,
     `- CODECAT_AUTO_FIX_ENABLED=\`${config.autoFixEnabled}\``,
     `- CODECAT_VERIFY_MODE=\`${config.verifyMode}\``,

@@ -28,6 +28,7 @@ Copy `.env.example` to `.env` and set at least:
 ```sh
 OPENAI_API_KEY=<your-openai-api-key>
 OPENAI_MODEL=gpt-5.5
+OPENAI_BASE_URL=https://api.openai.com/v1
 CODECAT_DAILY_CRON="0 3 * * *"
 CODECAT_TIMEZONE=Asia/Shanghai
 ```
