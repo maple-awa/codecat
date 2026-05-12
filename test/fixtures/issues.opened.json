@@ -1,0 +1,24 @@
+{
+  "action": "opened",
+  "issue": {
+    "number": 1,
+    "title": "App crashes on startup",
+    "body": "The app throws when I run npm start.",
+    "user": {
+      "login": "hiimbex"
+    }
+  },
+  "repository": {
+    "name": "testing-things",
+    "owner": {
+      "login": "hiimbex"
+    }
+  },
+  "installation": {
+    "id": 2
+  },
+  "sender": {
+    "login": "hiimbex",
+    "type": "User"
+  }
+}
